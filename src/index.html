@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>simple music widget</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="player col-xs-10 col-sm-10 col-md-8 col-lg-6 ">
+                <div class="row">
+                    <div class="player__cover col col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                        <img src="assets/cover1.jpg" class="img-responsive">
+                    </div>
+                    <div class="player__info col col-xs-7 col-sm-7 col-md-7 col-lg-7 ">
+                        <div class="player__info--trackName">The Pot</div>
+                        <div class="player__info--artist">Tool</div>
+                        <div class="player__info--album">10,000 Days</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="player__controls col col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <button class="player__controls--prev">
+                            <span>▶▶</span>
+                        </button>
+                        <button class="player__controls--play">
+                            <span>▶</span>
+                        </button>
+                        <button class="player__controls--next">
+                            <span>▶▶</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="player__time col col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <span class="currPlayStat">0:00</span> /
+                        <span class="totalTrackTime">6:45</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="player__timeline col col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <div class="player__timeline--range"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

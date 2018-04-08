@@ -1,0 +1,126 @@
+$bg-color: white;
+$main-font: 'Lato',sans-serif;
+body {
+  font-size: 16px;
+  font-family: $main-font;
+  background-color: $bg-color;
+  height: 100vh;
+}
+
+.container {
+  background-color: $bg-color;
+  margin-top: auto;
+  position: relative;
+  top: 50%;
+}
+
+.player {
+  box-sizing: content-box;
+  background-color: rgba(0, 0, 0, 0.786);
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 5px 15px 35px rgba(184, 180, 180, 0.69);
+  img {
+    width: inherit;
+    height: inherit;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.61);
+  }
+  .player__info {
+    margin-left: 6%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    %info {
+      font-size: 1.3rem;
+      font-weight: lighter;
+      text-align: center;
+      border-left: 1px solid white;
+    }
+    .player__info--artist,
+    .player__info--trackName,
+    .player__info--album {
+      @extend %info;
+    }
+    .player__info--trackName {
+      font-size: 1.8rem;
+      letter-spacing: 5px;
+      font-weight: bolder;
+    }
+  }
+  .player__controls {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    .player__controls--prev,
+    .player__controls--next,
+    .player__controls--play {
+      margin: 10px;
+      padding: 5px;
+      color: white;
+    }
+    .player__controls--prev,
+    .player__controls--next {
+      font-size: 0.8rem;
+      width: 45px;
+      height: 45px;
+      border-radius: 45px;
+      margin-top: 35px;
+    }
+    .player__controls--next {
+      padding-left: 7px;
+    }
+    .player__controls--play {
+      margin-top: 50px;
+      padding-left: 9px;
+      width: 65px;
+      height: 65px;
+      border-radius: 65px;
+    }
+    .player__controls--prev {
+      padding-right: 7px;
+      span {
+        display: block;
+        transform: rotate(180deg);
+      }
+    }
+    button {
+      outline: none;
+      border: 1px solid rgba(207, 203, 203, 0.358);
+      border-radius: 35px;
+      background-color: transparent;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+    }
+  }
+  .player__timeline {
+    margin: 0 auto;
+    height: 7px;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    .player__timeline--range {
+      background-color: #bd2130ed;
+      box-shadow: 0px 2px 3px #bd2130;
+      flex: 0; // flex basis would be used for changing progress of progressbar while music will be playing
+      flex-basis: 0%;
+      height: 100%;
+    }
+  }
+  .player__time {
+    font-size: 0.9rem;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+  }
+}
