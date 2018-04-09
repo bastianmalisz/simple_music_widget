@@ -94,7 +94,6 @@ function clickOnProgressBar(e) {
     let elWidth = e.target.clientWidth;
     // position of clicked element in X axis
     let elClickedXpos = e.offsetX;
-    console.log(e, elWidth, elClickedXpos);
     let percentageProgressBarPos = (elClickedXpos / elWidth) * 100;
     progressBar.style.flexBasis = percentageProgressBarPos + "%";
     seconds = Math.round((musicCollection[currentTrack].duration * (percentageProgressBarPos / 100)));
@@ -120,7 +119,6 @@ function nextTrack() {
     if (currentTrack == 4) {
         currentTrack = 0;
     }
-    console.log(currentTrack);
     stopMusic();
     if (mainPlayer.classList.contains("playing") || mainPlayer.classList.contains("paused")) {
         mainPlayer.classList.remove("playing");
